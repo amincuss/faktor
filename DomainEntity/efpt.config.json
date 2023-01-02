@@ -1,0 +1,52 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "pishroContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "DbContext",
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "DomainEntity",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Customer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvoiceCustomer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[InvoiceRegister]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Invoices]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "DESKTOP-ESKU36R\\SQL2019.pishro",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
