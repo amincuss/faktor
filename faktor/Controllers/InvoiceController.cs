@@ -36,7 +36,7 @@ namespace faktor.Controllers
 
 
         }
-        [HttpGet("AddInvoiceProduct")]
+        [HttpPost("AddInvoiceProduct")]
         public async Task<IActionResult> AddInvoice(AddInvoiceRegisterDto addInvoiceRegisterDto)
         {
           var add = await _invoiceRegisterServices.AddInvoiceProduct(addInvoiceRegisterDto);
