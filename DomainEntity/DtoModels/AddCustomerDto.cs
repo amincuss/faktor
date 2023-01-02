@@ -8,11 +8,11 @@ namespace DomainEntity.DtoModels
 {
   public class AddCustomerDto
     {
-        public string Name { get; set;}
-        public string Family { get; set; }
-        public int CodeMeli { get; set; }
-        public string Address { get; set; }
-        public string Mobile{ get; set; }
+        public string name { get; set;}
+        public string family { get; set; }
+        public string codeMelli { get; set; }
+        public string address { get; set; }
+        public string mobile{ get; set; }
 
 
 

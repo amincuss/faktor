@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,12 +27,12 @@ namespace Bussines.Layer.Customers.Services
     
 
                       var add = new Customer { 
-      Name = addCustomerDto.Name,
-                Address = addCustomerDto.Address,
-                CodeMelli = addCustomerDto.CodeMeli,
-                 Family= addCustomerDto.Family,
+      Name = addCustomerDto.name,
+                Address = addCustomerDto.address,
+                CodeMelli =int.Parse( addCustomerDto.codeMelli),
+                 Family= addCustomerDto.family,
                  IsDeleted=false,
-                 Mobile=addCustomerDto.Mobile,
+                 Mobile=addCustomerDto.mobile,
 
             };
           await  _pishroContext.Customer.AddAsync(add);

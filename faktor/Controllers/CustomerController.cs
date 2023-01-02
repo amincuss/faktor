@@ -31,13 +31,13 @@ namespace faktor.Controllers
 
 
         }
-        [HttpPost("GetAllCustomer")]
+        [HttpGet("GetAllCustomer")]
         public async Task<IActionResult> GetAllCustomer()
         {
 
             var load = await _customerServices.GetAllCustomer();
 
-            return Ok(new {Code = load.code, Message = load.message, CustomerId = load.list});
+            return Ok(new {Code = load.code, Message = load.message, customerlist = load.list});
 
 
         }

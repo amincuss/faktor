@@ -11,6 +11,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.InvoiceService();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("EnableCORS", builder =>
+    {
+        builder.WithOrigins("*")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
 builder.Services.AddDbContext<pishroContext>(
     options =>
     options.UseSqlServer(
@@ -27,6 +36,7 @@ if (app.Environment.IsDevelopment())
 
 
 
+app.UseCors("EnableCORS");
 
 app.MapControllers();
 
