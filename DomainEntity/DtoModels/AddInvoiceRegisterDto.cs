@@ -10,13 +10,12 @@ namespace DomainEntity.DtoModels
   public class AddInvoiceRegisterDto
     {
 
-        public int InvoiceNumber { get; set; }
+        public int invoiceNumber { get; set; }
 
-      public int CustomerId { set; get; }
-        public string ProductName { get; set; }
+        public string productName { get; set; }
 
-        public int ProductNumber { get; set; }
+        public int productNumber { get; set; }
 
-        public int ProductCost { get; set; }
+        public int productCost { get; set; }
     }
 }

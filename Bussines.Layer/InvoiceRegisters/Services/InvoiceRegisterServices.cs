@@ -25,11 +25,11 @@ namespace Bussines.Layer.InvoiceRegisters.Services
             {
                 var add = new InvoiceRegister
                 {
-                     InvoiceId= addInvoiceRegisterDto.InvoiceNumber,
-                     ProductCost= addInvoiceRegisterDto.ProductCost,
-                      ProductName= addInvoiceRegisterDto.ProductName,
-                      ProductNumber= addInvoiceRegisterDto.ProductNumber,
-                      
+                    InvoiceId = addInvoiceRegisterDto.invoiceNumber,
+                    ProductCost = addInvoiceRegisterDto.productCost,
+                    ProductName = addInvoiceRegisterDto.productName,
+                    ProductNumber = addInvoiceRegisterDto.productNumber,
+                    IsDeleted = false,
 
 
                 };
@@ -42,7 +42,7 @@ namespace Bussines.Layer.InvoiceRegisters.Services
 
             }catch(Exception ex)
             {
-                return (500, ex.Message);
+                return (500, ex.InnerException.ToString());
 
 
             }
@@ -71,7 +71,7 @@ namespace Bussines.Layer.InvoiceRegisters.Services
         {
             try
             {
-                var load = await _pishroContext.InvoiceRegister.AsNoTracking().ToListAsync();
+                var load = await _pishroContext.InvoiceRegister.Where(x=>x.IsDeleted==false).AsNoTracking().ToListAsync();
                 
                   
                
@@ -121,7 +121,8 @@ namespace Bussines.Layer.InvoiceRegisters.Services
                        IsDeleted=updateInvoiceRegisterDto.IsDeleted,
                         ProductCost=updateInvoiceRegisterDto.ProductCost,
                          ProductName=updateInvoiceRegisterDto.ProductName,
-                          ProductNumber = updateInvoiceRegisterDto.ProductNumber
+                          ProductNumber = updateInvoiceRegisterDto.ProductNumber,
+                          InvoiceId= updateInvoiceRegisterDto.InvoiceId,
 
                 };
                _pishroContext.InvoiceRegister.Update(update);

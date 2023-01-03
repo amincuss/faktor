@@ -10,7 +10,7 @@ namespace DomainEntity.DtoModels
     {
         public int InvoiceRegisterId { get; set; }
 
-
+        public int InvoiceId { get; set; }
         public Boolean IsDeleted { get; set; }
 
         public string ProductName { get; set; }

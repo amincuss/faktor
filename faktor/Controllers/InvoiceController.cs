@@ -54,7 +54,7 @@ namespace faktor.Controllers
 
 
         }
-        [HttpDelete("DeleteInvoiceProduct")]
+        [HttpDelete("DeleteInvoiceProduct/{invoiceRegisterId:int}")]
         public async Task<IActionResult> DeleteInvoiceProduct(int invoiceRegisterId)
         {
             var Submit = await _invoiceRegisterServices.DeleteInvoiceProduct(invoiceRegisterId);
